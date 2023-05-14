@@ -1,6 +1,6 @@
 {
     "resourceType": "Bundle",
-    "id": "4254625a-f2f8-4b6b-a771-824ae9e79fc2",
+    "id": "444039b6-c481-4987-a499-ac2227b4120a",
     "meta": {
         "profile": [
             "https://gematik.de/fhir/atf/StructureDefinition/bundle-app-transport-framework"
@@ -8,15 +8,15 @@
     },
     "identifier": {
         "system": "urn:ietf:rfc:3986",
-        "value": "urn:uuid:4254625a-f2f8-4b6b-a771-824ae9e79fc2"
+        "value": "urn:uuid:444039b6-c481-4987-a499-ac2227b4120a"
     },
     "type": "message",
     "entry": [
         {
-            "fullUrl": "urn:uuid:d095d85e-7afc-4607-9371-0f732e96a097",
+            "fullUrl": "urn:uuid:f68933a0-9231-4fa7-a0b3-5e10bf78fe3c",
             "resource": {
                 "resourceType": "MessageHeader",
-                "id": "d095d85e-7afc-4607-9371-0f732e96a097",
+                "id": "f68933a0-9231-4fa7-a0b3-5e10bf78fe3c",
                 "meta": {
                     "profile": [
                         "https://gematik.de/fhir/atf/StructureDefinition/message-header-app-transport"
@@ -33,7 +33,7 @@
                         "receiver": {
                             "identifier": {
                                 "system": "http://gematik.de/fhir/sid/KIM-Adresse",
-                                "value": "Receiver@example.com"
+                                "value": "receiver@gematik.kim.de"
                             },
                             "display": "Receiver"
                         }
@@ -51,16 +51,16 @@
                 },
                 "focus": [
                     {
-                        "reference": "urn:uuid:65e6f59e-8e99-417f-acb2-06cb882092db"
+                        "reference": "urn:uuid:77251376-d136-4cc6-aeb9-fafba279352a"
                     }
                 ]
             }
         },
         {
-            "fullUrl": "urn:uuid:65e6f59e-8e99-417f-acb2-06cb882092db",
+            "fullUrl": "urn:uuid:77251376-d136-4cc6-aeb9-fafba279352a",
             "resource": {
                 "resourceType": "Communication",
-                "id": "65e6f59e-8e99-417f-acb2-06cb882092db",
+                "id": "77251376-d136-4cc6-aeb9-fafba279352a",
                 "status": "completed",
                 "category": [
                     {

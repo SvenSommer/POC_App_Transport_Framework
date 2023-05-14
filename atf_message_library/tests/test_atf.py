@@ -1,7 +1,6 @@
 import os
 import unittest
 from uuid import uuid4
-from atf_message_builder import create_message_header, create_message_bundle
 from fhir.resources.bundle import BundleEntry
 from fhir.resources.messageheader import MessageHeader
 from fhir.resources.messageheader import MessageHeaderDestination, MessageHeaderSource
@@ -9,6 +8,9 @@ from fhir.resources.communication import Communication, CommunicationPayload
 from fhir.resources.fhirtypes import ReferenceType, CodeableConceptType
 from fhir.resources.attachment import Attachment
 from fhir.resources.identifier import Identifier
+
+from atf_message_library.atf_message_processor.ressource_creators.message_header_creator import MessageHeaderCreator
+from atf_message_library.atf_message_processor.ressource_creators.operation_outcome_bundle_creator import OperationOutcomeBundleCreator
 
 
 class TestAtf(unittest.TestCase):
@@ -49,7 +51,7 @@ class TestAtf(unittest.TestCase):
         )
         focus_reference = "urn:uuid:86a87254-ce15-11ed-afa1-0242ac120004"
         use_case = "Selbsttest;Lieferung"
-        message_header = create_message_header(
+        message_header = MessageHeaderCreator.create_message_header(
             str(uuid4()),
             self.message_sender,
             source,
@@ -115,7 +117,7 @@ class TestAtf(unittest.TestCase):
             endpointUrl="https://sender.example.com/endpoint",
         )
 
-        message_header = create_message_header(
+        message_header = MessageHeaderCreator.create_message_header(
             str(uuid4()),
             self.message_sender,
             source,
@@ -145,7 +147,7 @@ class TestAtf(unittest.TestCase):
             )
         ]
 
-        bundle = create_message_bundle(
+        bundle = OperationOutcomeBundleCreator.create_message_bundle(
             message_header=message_header,
             resources=resources
         )
