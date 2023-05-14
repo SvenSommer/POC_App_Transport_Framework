@@ -1,6 +1,6 @@
 {
     "resourceType": "Bundle",
-    "id": "444039b6-c481-4987-a499-ac2227b4120a",
+    "id": "dc338a2c-cd76-4e88-a2f7-b5b0eebabd15",
     "meta": {
         "profile": [
             "https://gematik.de/fhir/atf/StructureDefinition/bundle-app-transport-framework"
@@ -8,15 +8,15 @@
     },
     "identifier": {
         "system": "urn:ietf:rfc:3986",
-        "value": "urn:uuid:444039b6-c481-4987-a499-ac2227b4120a"
+        "value": "urn:uuid:dc338a2c-cd76-4e88-a2f7-b5b0eebabd15"
     },
     "type": "message",
     "entry": [
         {
-            "fullUrl": "urn:uuid:f68933a0-9231-4fa7-a0b3-5e10bf78fe3c",
+            "fullUrl": "urn:uuid:ae4ca1a5-2553-4d6e-acf1-433e2a002a4c",
             "resource": {
                 "resourceType": "MessageHeader",
-                "id": "f68933a0-9231-4fa7-a0b3-5e10bf78fe3c",
+                "id": "ae4ca1a5-2553-4d6e-acf1-433e2a002a4c",
                 "meta": {
                     "profile": [
                         "https://gematik.de/fhir/atf/StructureDefinition/message-header-app-transport"
@@ -33,7 +33,7 @@
                         "receiver": {
                             "identifier": {
                                 "system": "http://gematik.de/fhir/sid/KIM-Adresse",
-                                "value": "receiver@gematik.kim.de"
+                                "value": "client2@gematik.kim.de"
                             },
                             "display": "Receiver"
                         }
@@ -42,7 +42,7 @@
                 "sender": {
                     "identifier": {
                         "system": "http://gematik.de/fhir/sid/KIM-Adresse",
-                        "value": "sender@gematik.kim.de"
+                        "value": "client1@gematik.kim.de"
                     },
                     "display": "Sender"
                 },
@@ -51,16 +51,16 @@
                 },
                 "focus": [
                     {
-                        "reference": "urn:uuid:77251376-d136-4cc6-aeb9-fafba279352a"
+                        "reference": "urn:uuid:4731dc72-3f65-4776-9ed7-8e2f53c476d9"
                     }
                 ]
             }
         },
         {
-            "fullUrl": "urn:uuid:77251376-d136-4cc6-aeb9-fafba279352a",
+            "fullUrl": "urn:uuid:4731dc72-3f65-4776-9ed7-8e2f53c476d9",
             "resource": {
                 "resourceType": "Communication",
-                "id": "77251376-d136-4cc6-aeb9-fafba279352a",
+                "id": "4731dc72-3f65-4776-9ed7-8e2f53c476d9",
                 "status": "completed",
                 "category": [
                     {

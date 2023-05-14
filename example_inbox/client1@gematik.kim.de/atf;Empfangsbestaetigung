@@ -1,6 +1,6 @@
 {
     "resourceType": "Bundle",
-    "id": "d2714f84-9131-4e2c-af46-404e4c2a41af",
+    "id": "ad4512c0-0264-4c3a-9c0a-4aa5e8e64308",
     "meta": {
         "profile": [
             "https://gematik.de/fhir/atf/StructureDefinition/bundle-app-transport-framework"
@@ -8,15 +8,15 @@
     },
     "identifier": {
         "system": "urn:ietf:rfc:3986",
-        "value": "urn:uuid:d2714f84-9131-4e2c-af46-404e4c2a41af"
+        "value": "urn:uuid:ad4512c0-0264-4c3a-9c0a-4aa5e8e64308"
     },
     "type": "message",
     "entry": [
         {
-            "fullUrl": "urn:uuid:bade4f29-a760-4554-b7d8-a68ea1061de2",
+            "fullUrl": "urn:uuid:fbd803ca-a88e-4da6-961a-78c52010ff94",
             "resource": {
                 "resourceType": "MessageHeader",
-                "id": "bade4f29-a760-4554-b7d8-a68ea1061de2",
+                "id": "fbd803ca-a88e-4da6-961a-78c52010ff94",
                 "meta": {
                     "profile": [
                         "https://gematik.de/fhir/atf/StructureDefinition/message-header-app-transport"
@@ -33,7 +33,7 @@
                         "receiver": {
                             "identifier": {
                                 "system": "http://gematik.de/fhir/sid/KIM-Adresse",
-                                "value": "sender@gematik.kim.de"
+                                "value": "client1@gematik.kim.de"
                             },
                             "display": "Sender"
                         }
@@ -42,7 +42,7 @@
                 "sender": {
                     "identifier": {
                         "system": "http://gematik.de/fhir/sid/KIM-Adresse",
-                        "value": "receiver@gematik.kim.de"
+                        "value": "client2@gematik.kim.de"
                     },
                     "display": "Receiver"
                 },
@@ -51,16 +51,16 @@
                 },
                 "focus": [
                     {
-                        "reference": "urn:uuid:dfd74910-fb18-45c1-86cf-5c43264ed4cf"
+                        "reference": "urn:uuid:3c5d0e52-87b5-4cfa-a4d6-877bdb8d9cc2"
                     }
                 ]
             }
         },
         {
-            "fullUrl": "urn:uuid:dfd74910-fb18-45c1-86cf-5c43264ed4cf",
+            "fullUrl": "urn:uuid:3c5d0e52-87b5-4cfa-a4d6-877bdb8d9cc2",
             "resource": {
                 "resourceType": "OperationOutcome",
-                "id": "dfd74910-fb18-45c1-86cf-5c43264ed4cf",
+                "id": "3c5d0e52-87b5-4cfa-a4d6-877bdb8d9cc2",
                 "meta": {
                     "profile": [
                         "https://gematik.de/fhir/atf/StructureDefinition/atf-operation-outcome"
@@ -69,7 +69,7 @@
                 "extension": [
                     {
                         "url": "https://gematik.de/fhir/atf/StructureDefinition/atf-message-id-ex",
-                        "valueString": "f68933a0-9231-4fa7-a0b3-5e10bf78fe3c"
+                        "valueString": "ae4ca1a5-2553-4d6e-acf1-433e2a002a4c"
                     }
                 ],
                 "issue": [
