@@ -1,0 +1,85 @@
+{
+    "resourceType": "Bundle",
+    "id": "61b0a63e-bb26-4c8f-b7f2-85b96b76832a",
+    "meta": {
+        "profile": [
+            "https://gematik.de/fhir/atf/StructureDefinition/bundle-app-transport-framework"
+        ]
+    },
+    "identifier": {
+        "system": "urn:ietf:rfc:3986",
+        "value": "urn:uuid:61b0a63e-bb26-4c8f-b7f2-85b96b76832a"
+    },
+    "type": "message",
+    "entry": [
+        {
+            "fullUrl": "urn:uuid:c8981e3e-9aee-4846-8fe4-7b2778c58277",
+            "resource": {
+                "resourceType": "MessageHeader",
+                "id": "c8981e3e-9aee-4846-8fe4-7b2778c58277",
+                "meta": {
+                    "profile": [
+                        "https://gematik.de/fhir/atf/StructureDefinition/message-header-app-transport"
+                    ]
+                },
+                "eventCoding": {
+                    "system": "https://gematik.de/fhir/atf/CodeSystem/operation-identifier-cs",
+                    "code": "atf;Empfangsbestaetigung",
+                    "display": "Empfangsbest\u00e4tigung und Auskunft \u00fcber FHIR Interpretierbarkeit der Nachricht"
+                },
+                "destination": [
+                    {
+                        "endpointUrl": "unknown",
+                        "receiver": {
+                            "identifier": {
+                                "system": "http://gematik.de/fhir/sid/KIM-Adresse",
+                                "value": "sender@gematik.kim.de"
+                            },
+                            "display": "Sender"
+                        }
+                    }
+                ],
+                "sender": {
+                    "identifier": {
+                        "system": "http://gematik.de/fhir/sid/KIM-Adresse",
+                        "value": "Receiver@example.com"
+                    },
+                    "display": "Receiver"
+                },
+                "source": {
+                    "endpointUrl": "https://sender.example.com/endpoint"
+                },
+                "focus": [
+                    {
+                        "reference": "urn:uuid:3591c910-56b9-4a04-b239-828bd98f28d1"
+                    }
+                ]
+            }
+        },
+        {
+            "fullUrl": "urn:uuid:3591c910-56b9-4a04-b239-828bd98f28d1",
+            "resource": {
+                "resourceType": "OperationOutcome",
+                "id": "3591c910-56b9-4a04-b239-828bd98f28d1",
+                "meta": {
+                    "profile": [
+                        "https://gematik.de/fhir/atf/StructureDefinition/atf-operation-outcome"
+                    ]
+                },
+                "extension": [
+                    {
+                        "url": "https://gematik.de/fhir/atf/StructureDefinition/atf-message-id-ex",
+                        "valueString": "d095d85e-7afc-4607-9371-0f732e96a097"
+                    }
+                ],
+                "issue": [
+                    {
+                        "severity": "information",
+                        "code": "informational",
+                        "diagnostics": "Anfrage erfolgreich entgegengenommen"
+                    }
+                ]
+            }
+        }
+    ]
+}

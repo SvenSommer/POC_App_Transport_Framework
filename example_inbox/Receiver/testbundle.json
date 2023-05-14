@@ -1,0 +1,97 @@
+{
+    "resourceType": "Bundle",
+    "id": "4254625a-f2f8-4b6b-a771-824ae9e79fc2",
+    "meta": {
+        "profile": [
+            "https://gematik.de/fhir/atf/StructureDefinition/bundle-app-transport-framework"
+        ]
+    },
+    "identifier": {
+        "system": "urn:ietf:rfc:3986",
+        "value": "urn:uuid:4254625a-f2f8-4b6b-a771-824ae9e79fc2"
+    },
+    "type": "message",
+    "entry": [
+        {
+            "fullUrl": "urn:uuid:d095d85e-7afc-4607-9371-0f732e96a097",
+            "resource": {
+                "resourceType": "MessageHeader",
+                "id": "d095d85e-7afc-4607-9371-0f732e96a097",
+                "meta": {
+                    "profile": [
+                        "https://gematik.de/fhir/atf/StructureDefinition/message-header-app-transport"
+                    ]
+                },
+                "eventCoding": {
+                    "system": "https://gematik.de/fhir/atf/CodeSystem/service-identifier-cs",
+                    "code": "Selbsttest;Lieferung",
+                    "display": "Diese Dienstkennung dient ausschlie\u00dflich der Einrichtung des Kontos innerhalb eines PVS und des Testes, ob Nachrichten versendet und empfangen werden k\u00f6nnen. Diese Dienstkennung wird im PVS bei der normalen Abholung von Nachrichten ignoriert."
+                },
+                "destination": [
+                    {
+                        "endpointUrl": "https://receiver.example.com/endpoint",
+                        "receiver": {
+                            "identifier": {
+                                "system": "http://gematik.de/fhir/sid/KIM-Adresse",
+                                "value": "Receiver@example.com"
+                            },
+                            "display": "Receiver"
+                        }
+                    }
+                ],
+                "sender": {
+                    "identifier": {
+                        "system": "http://gematik.de/fhir/sid/KIM-Adresse",
+                        "value": "sender@gematik.kim.de"
+                    },
+                    "display": "Sender"
+                },
+                "source": {
+                    "endpointUrl": "https://sender.example.com/endpoint"
+                },
+                "focus": [
+                    {
+                        "reference": "urn:uuid:65e6f59e-8e99-417f-acb2-06cb882092db"
+                    }
+                ]
+            }
+        },
+        {
+            "fullUrl": "urn:uuid:65e6f59e-8e99-417f-acb2-06cb882092db",
+            "resource": {
+                "resourceType": "Communication",
+                "id": "65e6f59e-8e99-417f-acb2-06cb882092db",
+                "status": "completed",
+                "category": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://loinc.org",
+                                "code": "45012-6",
+                                "display": "Communication regarding test results"
+                            }
+                        ]
+                    }
+                ],
+                "priority": "routine",
+                "subject": {
+                    "display": "Max Mustermann"
+                },
+                "sent": "2023-03-29T13:28:17.239000+02:00",
+                "received": "2023-03-29T13:30:00+02:00",
+                "sender": {
+                    "display": "Dr. Anna Schmidt"
+                },
+                "payload": [
+                    {
+                        "contentAttachment": {
+                            "contentType": "text/plain",
+                            "data": "U2VsYnN0dGVzdCBhYnNjaGxpZXNzZW4uIEJpdHRlIGtsYXJlbiBTaWUgZGllIFRlc3RlcmdlYm5pc3NlIGFiLg==",
+                            "title": "Selbsttest Best\u00e4tigung"
+                        }
+                    }
+                ]
+            }
+        }
+    ]
+}
